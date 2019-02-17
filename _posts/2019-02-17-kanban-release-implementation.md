@@ -4,6 +4,8 @@ published: true
 title: Kanban implementation
 subtitle: How we implemented Kanban for a software delivery
 date: '2016-01-26'
+tags:
+  - agile
 ---
 Recently I worked with a team with –
 - No formal QA process (I was the first QA person in team)
