@@ -41,10 +41,10 @@ linkedin:
   baseURL: "https://linkedin.com/in/"
   icon: "fa-linkedin"
 
-xing:
-  name: "Xing"
-  baseURL: "https://www.xing.com/profile/"
-  icon: "fa-xing"
+#xing:
+#  name: "Xing"
+#  baseURL: "https://www.xing.com/profile/"
+#  icon: "fa-xing"
 
 stackoverflow:
   name: "StackOverflow"
@@ -71,25 +71,25 @@ spotify:
   baseURL: "https://open.spotify.com/user/"
   icon: "fa-spotify"
 
-telephone:
-  name: "Phone"
-  baseURL: "tel:"
-  icon: "fa-phone"
+#telephone:
+#  name: "Phone"
+#  baseURL: "tel:"
+#  icon: "fa-phone"
 
 rss:
   name: "RSS"
   baseURL: "{{ '/feed.xml' | prepend: site.baseurl }}"
   icon: "fa-rss"
 
-steam:
-  name: "Steam"
-  baseURL: "https://steamcommunity.com/id/"
-  icon: "fa-steam"
+#steam:
+#  name: "Steam"
+#  baseURL: "https://steamcommunity.com/id/"
+#  icon: "fa-steam"
 
-twitch:
-  name: "Twitch"
-  baseURL: "https://www.twitch.tv/"
-  icon: "fa-twitch"
+#twitch:
+#  name: "Twitch"
+#  baseURL: "https://www.twitch.tv/"
+#  icon: "fa-twitch"
 
 yelp:
   name: "Yelp"
