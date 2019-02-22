@@ -30,10 +30,11 @@ We initially started executing our builds on hosted build agents but later on fa
 ### Solution: 
 We moved on to Default build agents on the VMs provisioned for Testing and Staging. I followed below steps to achieve that.
 
-1. Deploy a windows build agent on build machine.
+#### Deploy a windows build agent on build machine.
 This is required when using external build machine to do builds from MS Release Management portal (VSTS). The “default” option in MS release management uses VSTS hosted build agent which cannot run functional tests created using Selenium or LeanFT in Visual studio.
-- Detailed steps are presented here https://msdn.microsoft.com/library/vs/alm/build/agents/windows
-2.Pre-requests for this from the above link
+- Detailed steps are presented [here](https://msdn.microsoft.com/library/vs/alm/build/agents/windows)
+
+#### Pre-requests for this from the above link
 - An operating system that is supported by Visual Studio 2013 or newer
 - Visual Studio 2013 or Visual Studio 2015
 - PowerShell 3 or newer (Where can I get a newer version of PowerShell?)
@@ -44,7 +45,7 @@ This is required when using external build machine to do builds from MS Release 
 3. Select your account(make sure you are the owner)
 4. Select the gear on top
 5. Select `Agent pools` -> `Download agent`
-6. Unzip the .zip file into the folder on disk from which you would like to run the agent. To avoid “path too long” issues on the file system, keep the path short. For example: C:\Agent\
+6. Unzip the .zip file into the folder on disk from which you would like to run the agent. To avoid “path too long” issues on the file system, keep the path short. For example: `C:\Agent\`
 7. Run Command Prompt as Administrator, and then run: `C:\Agent\ConfigureAgent.cmd`
 8. Respond to the prompts.
 9. Login to your account, when configuration is successful
