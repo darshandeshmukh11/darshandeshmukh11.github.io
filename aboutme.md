@@ -4,7 +4,7 @@ title: About me
 subtitle: DevOps professional
 published: true
 ---
-I am a DevOps professional with 9 years of experience in Continuous Testing, CI/CD and infrastructure orchestration. I have worked with clients to consult, coach and migrate their software development practice to next generation fault tolerant, reusable ecosystem.   
+I am a DevOps professional with 12 years of experience in Continuous Testing, CI/CD and infrastructure orchestration. I have worked with clients to consult, coach and migrate their software development practice to next generation fault tolerant, reusable ecosystem.   
 
 ### My current role 
 
