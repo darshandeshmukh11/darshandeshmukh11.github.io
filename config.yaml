@@ -15,6 +15,12 @@ params:
   homeInfoContent: markdown
 
   homeInfoParams:
+    Title: "Hi, I am Darshan Deshmukh"
+  Content: |
+    Platform Engineering • AI-Native Software Delivery
+    Cloud Architecture • Developer Experience
+    Building engineering platforms, cloud infrastructure and AI
+    systems that help developers ship software faster.
   socialIcons:
     - name: github
       url: "https://github.com/darshandeshmukh11"
