@@ -15,10 +15,10 @@ params:
   homeInfoContent: markdown
 
   homeInfoParams:
-    Title: "Hi, I am Darshan Deshmukh"
   Content: |
     Platform Engineering • AI-Native Software Delivery
     Cloud Architecture • Developer Experience
+
     Building engineering platforms, cloud infrastructure and AI
     systems that help developers ship software faster.
   socialIcons:
@@ -35,4 +35,3 @@ menu:
       name: Blog
       url: /posts/
       weight: 10
-
