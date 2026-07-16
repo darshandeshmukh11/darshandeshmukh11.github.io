@@ -14,6 +14,8 @@ params:
   homeInfoContent: markdown
 
   homeInfoParams:
+  Title: ""
+  
     Content: |
       Platform Engineering • AI-Native Software Delivery
       Cloud Architecture • Developer Experience
