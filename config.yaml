@@ -14,14 +14,10 @@ params:
   homeInfoContent: markdown
 
   homeInfoParams:
-  Title: ""
-  
+  Title: "Building Developer Platforms, AI Systems & Cloud Infrastructure"
     Content: |
-      Platform Engineering • AI-Native Software Delivery
-      Cloud Architecture • Developer Experience
-
-      Building engineering platforms, cloud infrastructure and AI
-      systems that help developers ship software faster.
+      ** Platform Engineering • AI-Native Software Delivery •Cloud Architecture • Developer Experience
+      Building engineering platforms, cloud infrastructure and AI systems that help developers ship software faster.
   socialIcons:
     - name: github
       url: "https://github.com/darshandeshmukh11"
