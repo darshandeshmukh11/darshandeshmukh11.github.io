@@ -1,0 +1,95 @@
+baseURL: https://example.org/
+locale: en-us
+title: Darshan Deshmukh
+theme: ["PaperMod"]
+
+pagination:
+  pagerSize: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON   # required for the built-in search page
+
+params:
+  env: production
+  defaultTheme: dark
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  TocOpen: false
+  UseHugoToc: true
+  comments: false
+
+  profileMode:
+    enabled: false
+
+  homeInfoParams:
+    Title: "Building Developer Platforms, AI Systems & Cloud Infrastructure"
+    Content: |
+      Platform Engineering • AI-Native Software Delivery • Cloud Architecture • Developer Experience
+      Building engineering platforms, cloud infrastructure and AI systems that help developers ship software faster.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/darshandeshmukh11"
+    - name: linkedin
+      url: "https://linkedin.com/in/darshandeshmukh"
+    - name: email
+      url: "mailto:darshandeshmukh11@gmail.com"
+
+  assets:
+    disableHLJS: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 5
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 40
+
+markup:
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
