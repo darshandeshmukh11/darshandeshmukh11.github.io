@@ -2,4 +2,6 @@
 title: "Home"
 ---
 
-Welcome to the site. This is a placeholder homepage. Replace with your actual content.
+Platform Engineering • AI-Native Software Delivery Cloud Architecture • Developer Experience
+
+Building engineering platforms, cloud infrastructure and AI systems that help developers ship software faster.
