@@ -1,0 +1,86 @@
+{{ define "main" }}
+
+{{- if .Site.Params.profileMode.enabled }}
+  {{- partial "index_profile.html" . }}
+{{- else }}
+  {{- if .Site.Params.homeInfoParams }}
+    {{- partial "home_info.html" . }}
+  {{- end }}
+{{- end }}
+
+{{- $featured := where (where site.RegularPages "Section" "projects") ".Params.featured" true }}
+{{- $featured = $featured.ByParam "weight" }}
+
+{{- with $featured }}
+<section class="featured-projects">
+  <h2 class="featured-projects-title">Featured Projects</h2>
+  <div class="featured-projects-grid">
+    {{- range . }}
+    <a class="featured-tile" href="{{ .Permalink }}">
+      {{- with .Params.cover }}
+        {{- with .image }}
+        <div class="featured-tile-image" style="background-image:url('{{ . | absURL }}');"></div>
+        {{- end }}
+      {{- end }}
+      <div class="featured-tile-body">
+        <h3 class="featured-tile-title">{{ .Title }}</h3>
+        {{- with .Params.description }}
+        <p class="featured-tile-desc">{{ . }}</p>
+        {{- end }}
+        {{- with .Params.tags }}
+        <div class="featured-tile-tags">
+          {{- range . }}<span class="featured-tag">{{ . }}</span>{{- end }}
+        </div>
+        {{- end }}
+      </div>
+    </a>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- if not .Site.Params.profileMode.enabled }}
+{{- $pages := where (where site.RegularPages "Type" "in" site.Params.mainSections | default site.RegularPages) "Section" "!=" "projects" }}
+  {{- $paginator := .Paginate $pages }}
+  {{- if $paginator.Pages }}
+  <section class="recent-posts">
+    {{- range $paginator.Pages }}
+    <article class="post-entry">
+      {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
+      {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
+      <header class="entry-header">
+        <h2>
+          {{- .Title }}
+          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+        </h2>
+      </header>
+      {{- if (ne (.Param "hideSummary") true) }}
+      <section class="entry-content">
+        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+      </section>
+      {{- end }}
+      {{- if not (.Param "hideMeta") }}
+      <footer class="entry-footer">
+        {{- partial "post_meta.html" . -}}
+      </footer>
+      {{- end }}
+      <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+    </article>
+    {{- end }}
+  </section>
+  {{- if gt $paginator.TotalPages 1 }}
+  <footer class="page-footer">
+    <nav class="pagination">
+      {{- if $paginator.HasPrev }}
+      <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« {{ i18n "prev_page" }}</a>
+      {{- end }}
+      {{- if $paginator.HasNext }}
+      <a class="next" href="{{ $paginator.Next.URL | absURL }}">{{ i18n "next_page" }} »</a>
+      {{- end }}
+    </nav>
+  </footer>
+  {{- end }}
+  {{- end }}
+{{- end }}
+
+{{ end }}
